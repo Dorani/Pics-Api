@@ -6,8 +6,11 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
     var animal = $(this).text();// refers to button clicked, using method "text" dog when dog is clicked etc..
     var flickOptions = {
       tags: animal,
+      format: "json"
     };
+    function displayPhotos(data){
 
+    }
     $.getJSON(flickerAPI, flickOptions, displayPhotos);
   });
 })
@@ -26,3 +29,6 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
 //flickerAPI, i added query string at the end to tell flickr we are making a json p request
 //it allows you get around the security limitation
 // data: when button is clicked we need diff data, per button type click, dog cat moose.
+//url set, data in place, now we need a callback function displayPhotos
+//function takes in 1 argument, data, which represents json data returned by jquery
+//jquery parsed the data
