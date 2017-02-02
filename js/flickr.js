@@ -2,6 +2,12 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
   $('button').click(function(){
     $("button").removeClass("selected"); //remove highlight after click event
     $(this).addClass("selected");
+    var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    var animal = $(this).text();// refers to button clicked, using method "text" dog when dog is clicked etc..
+    var flickOptions = {
+      tags: animal,
+    };
+
     $.getJSON(flickerAPI, flickOptions, displayPhotos);
   });
 })
@@ -17,3 +23,6 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
 //so we will put the programing inside the click event
 //we will use .getJSON method that will take the following arguments
 //url to resource, the data we want to send along with the url, a callback function when flickr responds
+//flickerAPI, i added query string at the end to tell flickr we are making a json p request
+//it allows you get around the security limitation
+// data: when button is clicked we need diff data, per button type click, dog cat moose.
