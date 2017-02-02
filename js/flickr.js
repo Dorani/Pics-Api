@@ -53,3 +53,10 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
 //1st opening li tag, using classes specified
 //2nd link to flickr page with img, url used for href attri is a js obj,photo, and get link of that obj we use .link
 //3rd we add an img, close a tag and li tag, we need to use an obj for property, path to filter
+
+
+
+//how can we improve this?
+//maybe adding a search field for user inputs
+//once the submit button is clicked, perhaps fetch the contents of that
+//we would have to use a search form perhaps?
