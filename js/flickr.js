@@ -1,7 +1,6 @@
 $(document).ready(function(){   //to make sure js code doesn't run before html is fully loaded
-  $('button').click(function(){
-    $("button").removeClass("selected"); //remove highlight after click event
-    $(this).addClass("selected");
+  $('form').submit(function(evt){
+
 
     //Ajax Section:
     var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
