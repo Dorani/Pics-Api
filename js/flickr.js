@@ -41,4 +41,15 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
 //jquery parsed the data
 
 
-//create html
+//create var called photoHTML ul
+//add photos
+//.each takes 2 arguments, array and callback function
+//loops through each item in array and applies the callback function to it
+//callback function has 2 arguments, index and item in array, they change as the loop works
+//data hold json data, but really js, cus jquery parsed the data and converted
+//data.items holds entire array of photos
+//item can be changed to photos
+//now we need to build out the html, using the design specification
+//1st opening li tag, using classes specified
+//2nd link to flickr page with img, url used for href attri is a js obj,photo, and get link of that obj we use .link
+//3rd we add an img, close a tag and li tag, we need to use an obj for property, path to filter
