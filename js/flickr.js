@@ -5,7 +5,7 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
 
     //Ajax Section:
     var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-    var animal = $(this).text();// refers to button clicked, using method "text" dog when dog is clicked etc..
+    var animal = $searchField.val();// refers to value of input before api search
     var flickOptions = {
       tags: animal,
       format: "json"
