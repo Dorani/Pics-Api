@@ -1,6 +1,7 @@
 $(document).ready(function(){   //to make sure js code doesn't run before html is fully loaded
   $('form').submit(function(evt){
-
+    evt.preventDefault();//we dont want to leave the page
+    var $searchField = $('#search');
 
     //Ajax Section:
     var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
