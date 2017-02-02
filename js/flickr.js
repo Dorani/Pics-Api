@@ -9,11 +9,18 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
       format: "json"
     };
     function displayPhotos(data){
-
+      var photoHTML = '<ul>';
+      $.each(data.items , function(i, photo){
+        photoHTML += '<li class="grid-25 tablet-grid-50">';
+        photoHTML += '<a href=" '+ photo.link + ' " class="image">';
+        photoHTML += '<img src= " ' + photo.media.m + ' "> </a></li>';
+      });
+      photoHTML += '</ul>';
+      $('#photos').html(photoHTML);
     }
     $.getJSON(flickerAPI, flickOptions, displayPhotos);
   });
-})
+});
 //event handler, when button is clicked, program runs, 3 buttons, cat dog and moose
 //click method, another handler function, runs each time the buttons is clicked
 //callback function for click event
@@ -32,3 +39,6 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
 //url set, data in place, now we need a callback function displayPhotos
 //function takes in 1 argument, data, which represents json data returned by jquery
 //jquery parsed the data
+
+
+//create html
