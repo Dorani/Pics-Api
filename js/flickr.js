@@ -2,6 +2,8 @@ $(document).ready(function(){   //to make sure js code doesn't run before html i
   $('button').click(function(){
     $("button").removeClass("selected"); //remove highlight after click event
     $(this).addClass("selected");
+
+    //Ajax Section:
     var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
     var animal = $(this).text();// refers to button clicked, using method "text" dog when dog is clicked etc..
     var flickOptions = {
